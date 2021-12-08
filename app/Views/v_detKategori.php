@@ -9,45 +9,43 @@
         <div class="page-body">
             <div class="row">
                 <!--  sale analytics start -->
-                <div class="col-sm-12">
-                    <div class="card table-card">
-                        <?php if (session()->getFlashdata('pesan')) : ?>
-                            <div class="alert alert-success" role="alert">
-                                <?= session()->getFlashdata('pesan'); ?>
+                <?php
+                foreach ($note as $i => $note) : ?>
+                    <div class="col-xl-4 col-md-8">
+                        <div class="card table-card">
+                            <?php if (session()->getFlashdata('pesan')) : ?>
+                                <div class="alert alert-success" role="alert">
+                                    <?= session()->getFlashdata('pesan'); ?>
+                                </div>
+                            <?php endif ?>
+                            <div class="card-header">
+                                <h5><?= $note['kategori']; ?></h5>
+                                <div class="card-header-right">
+                                    <ul class="list-unstyled card-option">
+                                        <li><i class="fa fa fa-wrench open-card-option"></i></li>
+                                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                                        <li><i class="fa fa-minus minimize-card"></i></li>
+                                        <li><i class="fa fa-refresh reload-card"></i></li>
+                                        <li><i class="fa fa-trash close-card"></i></li>
+                                    </ul>
+                                </div>
                             </div>
-                        <?php endif ?>
-                        <div class="card-header">
-                            <h5>Note's Detail sorted by Category</h5>
-                        </div>
-                        <div class="container ">
-                            <div class="row">
-                                <?php
-                                $note_id = 0;
-                                foreach ($note as $note) :
-                                    $note_id++;
-                                ?>
-                                    <div class="col-lg-8">
-                                        <h1 class="mb-4">
-                                            <?= $note['judul']; ?>
-                                        </h1>
-                                        <div class="post-meta d-flex mb-5">
-                                            <div class="vcard ">
-                                                <span class="date-read">Created at: <?= $note['created_at']; ?> <span class="mx-1">&bullet;
-                                                    </span>
-                                                    <span class="date-read">Updated at: <?= $note['updated_at']; ?> <span class="mx-1">&bullet;
-                                                        </span>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                <?php
-                                endforeach;
-                                ?>
+                            <div class="card-block">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <td><a href="/notes/detail/<?= $note['slug']; ?>"><?= $note['judul']; ?></a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
+                <?php
+                endforeach;
+                ?>
 
                 <!--  sale analytics end -->
 

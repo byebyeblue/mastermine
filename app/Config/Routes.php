@@ -38,7 +38,7 @@ $routes->get('/notes/detail/(:any)', 'NoteController::detail/$1');
 $routes->get('/notes/edit/(:any)', 'NoteController::editnote/$1');
 $routes->post('/notes/update/(:any)', 'NoteController::update/$1');
 $routes->get('/notes/delete/(:any)', 'NoteController::delete/$1');
-$routes->get('/notes/kategori/(:any)', 'NoteController::kategori/$1');
+$routes->get('/notes/category', 'NoteController::category');
 
 /*
  * --------------------------------------------------------------------
