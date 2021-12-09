@@ -92,7 +92,8 @@ class NoteController extends BaseController
 
         $data = [
             'title' => 'Detail Kategori Note',
-            'note' => $this->NoteModel->getNotes()
+            'note' => $this->NoteModel->getNotes(),
+            'kategori' => $this->NoteModel->groupby('note.kategori')
         ];
         return view('v_detKategori', $data);
     }

@@ -34,6 +34,7 @@
                                 <div class="table-responsive">
                                     <table class="table table-hover">
                                         <tbody>
+
                                             <tr>
                                                 <td><a href="/notes/detail/<?= $note['slug']; ?>"><?= $note['judul']; ?></a></td>
                                             </tr>

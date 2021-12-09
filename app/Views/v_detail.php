@@ -37,6 +37,8 @@
                                         <div class="vcard ">
                                             <span class="date-read">Created at: <?= $note['created_at']; ?> <span class="mx-1">&bullet;
                                                 </span>
+                                                <span class="date-read">Updated at: <?= $note['updated_at']; ?> <span class="mx-1">
+                                                    </span>
                                         </div>
                                     </div>
                                     <div class="mb-5">
