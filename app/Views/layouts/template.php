@@ -27,6 +27,10 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="/assets/material_able-main/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="/assets/material_able-main/assets/css/jquery.mCustomScrollbar.css">
+    <!-- Calendar -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/material_able-main/assetscalender/css/style.css">
 
 </head>
 
@@ -133,6 +137,11 @@
         </div>
     </div>
 
+    <!-- Calendar -->
+    <script type="text/javascript" src="/assets/material_able-main/assetscalender/js/jquery.min.js "></script>
+    <script type="text/javascript" src="/assets/material_able-main/assetscalender/js/popper.js "></script>
+    <script type="text/javascript" src="/assets/material_able-main/assetscalender/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/assets/material_able-main/assetscalender/js/main.js"></script>
     <!-- Required Jquery -->
     <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery/jquery.min.js "></script>
     <script type="text/javascript" src="/assets/material_able-main/assets/js/jquery-ui/jquery-ui.min.js "></script>
