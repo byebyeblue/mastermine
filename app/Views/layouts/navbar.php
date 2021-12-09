@@ -35,7 +35,7 @@
             </ul>
             <ul class="nav-right">
                 <li class="user-profile header-notification">
-                    <a href="auth-normal-sign-in.html">
+                    <a href="/logout">
                         <i class="ti-layout-sidebar-left"></i> Logout
                     </a>
                 </li>
