@@ -27,6 +27,7 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="/assets/material_able-main/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="/assets/material_able-main/assets/css/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" type="text/css" href="/assets/material_able-main/assets/css/profile.scss">
     <!-- Calendar -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -107,7 +108,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-8">
                                         <div class="page-header-title">
-                                            <h5 class="m-b-10"> Hi, <?= user()->username; ?></h5>
+                                            <h5 class="m-b-10"> Hi, <?= ucfirst(user()->username); ?></h5>
                                             <p class="m-b-0">Welcome to Mastermine</p>
                                         </div>
                                     </div>
@@ -156,6 +157,7 @@
     <script src="/assets/material_able-main/assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <!-- Custom js -->
     <script type="text/javascript" src="/assets/material_able-main/assets/js/script.min.js"></script>
+    <script type="text/javascript" src="/assets/material_able-main/assets/js/profile.js"></script>
     <!-- JS for Textarea -->
     <script type="text/javascript" src="//js.nicedit.com/nicEdit-latest.js"></script>
     <script type="text/javascript">
