@@ -31,7 +31,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/material_able-main/assetscalender/css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -161,6 +161,15 @@
     <script type="text/javascript">
         bkLib.onDomLoaded(function() {
             nicEditors.allTextAreas()
+        });
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"> </script> -->
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"> </script>
+    <!-- <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"> </script> -->
+
+    <script>
+        $(document).ready(function() {
+            $('table.example').DataTable();
         });
     </script>
 </body>

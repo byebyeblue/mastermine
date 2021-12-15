@@ -10,7 +10,7 @@
             <div class="row">
                 <!--  sale analytics start -->
                 <?php
-                foreach ($note as $i => $note) : ?>
+                foreach ($kategori as $i => $kategori) : ?>
                     <div class="col-xl-4 col-md-8">
                         <div class="card table-card">
                             <?php if (session()->getFlashdata('pesan')) : ?>
@@ -19,7 +19,7 @@
                                 </div>
                             <?php endif ?>
                             <div class="card-header">
-                                <h5><?= $note['kategori']; ?></h5>
+                                <h5><?= $kategori['kategori']; ?></h5>
                                 <div class="card-header-right">
                                     <ul class="list-unstyled card-option">
                                         <li><i class="fa fa fa-wrench open-card-option"></i></li>
@@ -32,14 +32,28 @@
                             </div>
                             <div class="card-block">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <tbody>
+                                    <table class="table table-hover example" id="example">
+                                        <thead>
                                             <tr>
-                                                <td><a href="/notes/detail/<?= $note['slug']; ?>"><?= $note['judul']; ?></a></td>
+                                                <th>Judul</th>
                                             </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            foreach ($note as $n) : ?>
+                                                <?php if ($n['kategori'] == $kategori['kategori']) : ?>
 
+                                                    <tr>
+                                                        <td><a href="/notes/detail/<?= $n['slug']; ?>"><?= $n['judul']; ?></a></td>
+
+                                                    </tr>
+                                                <?php endif; ?>
+                                            <?php
+                                            endforeach;
+                                            ?>
                                         </tbody>
                                     </table>
+
                                 </div>
                             </div>
                         </div>

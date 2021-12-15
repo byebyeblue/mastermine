@@ -98,8 +98,9 @@ class NoteController extends BaseController
             'note' => $this->NoteModel->getNotes(),
             // 'note' => $this->NoteModel->paginate(5),
             // 'pager' => $this->NoteModel->pager,
-            'kategori' => $this->NoteModel->groupBy('note.kategori')->findAll()
+            'kategori' => $this->NoteModel->groupBy('note.kategori')->get()->getResultArray()
         ];
+        // dd($data);
         return view('v_detKategori', $data);
     }
 
