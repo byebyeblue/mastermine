@@ -5,7 +5,7 @@
             <div class="main-menu-header">
                 <img class="img-50 img-radius align-center" src="/assets/material_able-main/assets/images/profile8.png" alt="User-Profile-Image">
                 <div class="user-details">
-                    <span>Mail<i class=""></i></span>
+                    <span><?= user()->username; ?><i class=""></i></span>
                 </div>
             </div>
 

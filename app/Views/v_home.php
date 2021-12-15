@@ -32,11 +32,11 @@
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <tbody>
-
+                                        <?php $i = 1 +  (5 * ($currentPage - 1)); ?>
                                         <?php
-                                        foreach ($note as $i => $note) : ?>
+                                        foreach ($note as $note) : ?>
                                             <tr>
-                                                <th scope="row"><?= $i + 1; ?></th>
+                                                <th scope="row"><?= $i++; ?></th>
                                                 <td><a href="/notes/detail/<?= $note['slug']; ?>"><?= $note['judul']; ?></a></td>
                                                 <td><?= $note['kategori']; ?></td>
                                             </tr>
@@ -45,7 +45,7 @@
                                         ?>
                                     </tbody>
                                 </table>
-
+                                <?= $pager->links('note', 'note_pagination') ?>
                             </div>
                         </div>
                     </div>

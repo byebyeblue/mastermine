@@ -13,10 +13,14 @@ class NoteController extends BaseController
     }
     public function index()
     {
-        $note = $this->NoteModel->findAll();
+
+        $currentPage = $this->request->getVar('page_note') ? $this->request->getVar('page_note') :
+            1;
         $data = [
             'title' => "Dashboard",
-            'note' => $note
+            'note' => $this->NoteModel->paginate(5, 'note'),
+            'pager' => $this->NoteModel->pager,
+            'currentPage' => $currentPage
         ];
         return view('v_home', $data);
     }
@@ -89,11 +93,12 @@ class NoteController extends BaseController
 
     public function category()
     {
-
         $data = [
             'title' => 'Detail Kategori Note',
             'note' => $this->NoteModel->getNotes(),
-            'kategori' => $this->NoteModel->groupby('note.kategori')
+            // 'note' => $this->NoteModel->paginate(5),
+            // 'pager' => $this->NoteModel->pager,
+            'kategori' => $this->NoteModel->groupBy('note.kategori')->findAll()
         ];
         return view('v_detKategori', $data);
     }
