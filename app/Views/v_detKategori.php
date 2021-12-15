@@ -10,8 +10,8 @@
             <div class="row">
                 <!--  sale analytics start -->
                 <?php
-                foreach ($kategori as $i => $kategori) : ?>
-                    <div class="col-xl-4 col-md-8">
+                foreach ($kategori as $ktg) : ?>
+                    <div class="col-xl-6 col-md-8">
                         <div class="card table-card">
                             <?php if (session()->getFlashdata('pesan')) : ?>
                                 <div class="alert alert-success" role="alert">
@@ -19,7 +19,7 @@
                                 </div>
                             <?php endif ?>
                             <div class="card-header">
-                                <h5><?= $kategori['kategori']; ?></h5>
+                                <h5><?= $ktg['kategori']; ?></h5>
                                 <div class="card-header-right">
                                     <ul class="list-unstyled card-option">
                                         <li><i class="fa fa fa-wrench open-card-option"></i></li>
@@ -31,29 +31,30 @@
                                 </div>
                             </div>
                             <div class="card-block">
-                                <div class="table-responsive">
-                                    <table class="table table-hover example" id="example">
-                                        <thead>
-                                            <tr>
-                                                <th>Judul</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            foreach ($note as $n) : ?>
-                                                <?php if ($n['kategori'] == $kategori['kategori']) : ?>
+                                <div class="container">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover example" id="example">
+                                            <thead>
+                                                <tr>
+                                                    <th>Judul</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php
+                                                foreach ($note as $n) : ?>
+                                                    <?php if ($n['kategori'] == $ktg['kategori']) : ?>
 
-                                                    <tr>
-                                                        <td><a href="/notes/detail/<?= $n['slug']; ?>"><?= $n['judul']; ?></a></td>
+                                                        <tr>
+                                                            <td><a href="/notes/detail/<?= $n['slug']; ?>"><?= $n['judul']; ?></a></td>
 
-                                                    </tr>
-                                                <?php endif; ?>
-                                            <?php
-                                            endforeach;
-                                            ?>
-                                        </tbody>
-                                    </table>
-
+                                                        </tr>
+                                                    <?php endif; ?>
+                                                <?php
+                                                endforeach;
+                                                ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

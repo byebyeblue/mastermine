@@ -342,7 +342,6 @@ legend {
   white-space: normal;
 }
 
-
 gress {
   vertical-align: baseline;
 }
@@ -11828,7 +11827,7 @@ a.text-dark:focus {
 
 body {
   font-family: "Lato", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.8;
   font-weight: normal;
   background: #f8f9fd;
@@ -12282,4 +12281,3 @@ h5,
 .error-input {
   border-color: #448aff;
 }
-
